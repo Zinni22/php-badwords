@@ -18,6 +18,9 @@ Mi riprendono in canotta mentre mi faccio una botta <br>
 Sul CD di Skin, in onda sulla BBC <br>
 Ops, l\'ho fatto un\'altra volta come Britney Spears'; 
 
+
+$paragrafoDopo = str_replace( $_GET['parola'], '***', $paragrofoPrima);
+
 ?>
 
 <!DOCTYPE html>
@@ -30,9 +33,50 @@ Ops, l\'ho fatto un\'altra volta come Britney Spears';
 </head>
 <body>
 
-<p>
-    <?php echo $paragrofoPrima; ?>
-</p>
+    <h1>
+        Testo "Mob" - Lazza, Nitro, Salmo
+    </h1>
+
+    <div>
+
+        <p>
+            <?php echo $paragrofoPrima; ?>
+        </p>
+
+        <div class="form">
+            <form action="" method="GET">
+
+                <input type="text" name="parola" placeholder="Inserisci la parola da censurare">
+
+                <button>
+                    Cerca
+                </button>
+            </form>
+
+            <p>
+                Hai cercato la parola: <?php echo $_GET['parola']; ?>
+            </p>
+        </div>
+
+        <p>
+            <?php echo $paragrafoDopo; ?>
+        </p>
+
+
+    </div>
+
     
 </body>
 </html>
+
+<style>
+    body{
+        font-family: arial;
+    }
+    .form{
+        margin: 50px 0;
+    }
+    input{
+        width: 200px;
+    }
+</style>
