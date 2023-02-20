@@ -43,6 +43,10 @@ $paragrafoDopo = str_replace( $_GET['parola'], '***', $paragrofoPrima);
             <?php echo $paragrofoPrima; ?>
         </p>
 
+        <p>
+            Il paragrago ha: <?php echo strlen($paragrofoPrima) ?> caratteri
+        </p>
+
         <div class="form">
             <form action="" method="GET">
 
